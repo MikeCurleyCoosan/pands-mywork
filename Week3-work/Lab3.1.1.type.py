@@ -1,4 +1,5 @@
 #First weekly task of week 3 PANDS
+#Displaying different data types and printing these to the console
 #Author: Michael Curley
 
 
