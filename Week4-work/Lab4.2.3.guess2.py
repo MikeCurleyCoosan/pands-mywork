@@ -4,7 +4,11 @@
 #Modification.....How would you modify the program, so that the program tells the user
 #if there guess is too high or too low, each time they guess. HINT: put an if statement inside the while loop
 
-numToGuess = 30
+#Extra.....Get the program to generate a random number between 0 and 100 to guess
+
+import random
+
+numToGuess = random.randint(0,100)
 
 guess = int(input('Please guess the number: '))
 
