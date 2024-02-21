@@ -78,3 +78,24 @@ print(max(a)) #qux
 x = ['a', ['bb', ['ccc', 'ddd'], 'ee', 'ff'], 'g', ['hh', 'ii'], 'j']
 
 print(x[0], x[2], x[4]) #a g j
+
+#To access elements in a sublist, simply append an additional index
+
+x[1] #['bb', ['ccc', 'ddd'], 'ee', 'ff']
+
+x[1][0] #bb
+
+x[1][1] #['ccc', 'ddd']
+
+x[1][2] #'ee'
+
+x[1][3] #'ff'
+
+
+x[3] #['hh', 'ii']
+
+print(x[3][0], x[3][1]) #hh ii
+
+x[1][1] #['ccc', 'ddd']
+
+print(x[1][1][0], x[1][1][1]) #ccc ddd
