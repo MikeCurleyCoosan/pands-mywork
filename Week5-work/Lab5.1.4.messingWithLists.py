@@ -106,7 +106,38 @@ print('ddd' in x) #False
 print('ddd' in x[1]) #False
 print('ddd' in x[1][1]) #True
 
-#Also not subelements of x are not included in the len() function
+#Also note subelements of x are not included in the len() function
 
 print(len(x)) #5, x only has 5 elements in in, three string and two sublists
 print(len(x[1])) #4
+
+#Lists are mutable, meaning they can be changed after they are created
+#Modifying a single value in a list is as simple as assigning a new value to the element using the index
+
+a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
+
+a[2] = 10
+
+print(a)   #['foo', 'bar', 10, 'qux', 'quux', 'corge']
+
+#The del statement can be used to remove an element from a list
+
+a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
+
+del a[3]
+
+print(a) #['foo', 'bar', 'baz', 'quux', 'corge']
+
+#Modifying multiple elements in a list can be done using slices
+
+a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']
+
+a[1:4] = [1.1, 2.2, 3.3, 4.4]   
+
+print(a) #['foo', 1.1, 2.2, 3.3, 4.4, 'quux', 'corge']
+
+print(a[1:5]) #[1.1, 2.2, 3.3, 4.4]  
+
+a[1:5] = ['bark']   
+
+print(a)) #['foo', 'bark', 'quux', 'corge']
