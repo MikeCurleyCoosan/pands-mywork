@@ -99,3 +99,14 @@ print(x[3][0], x[3][1]) #hh ii
 x[1][1] #['ccc', 'ddd']
 
 print(x[1][1][0], x[1][1][1]) #ccc ddd
+
+#Note 'ddd" is not one of the elements in the list x, or in the sublist x[1], but is only an element of the sublist x[1][1]
+
+print('ddd' in x) #False
+print('ddd' in x[1]) #False
+print('ddd' in x[1][1]) #True
+
+#Also not subelements of x are not included in the len() function
+
+print(len(x)) #5, x only has 5 elements in in, three string and two sublists
+print(len(x[1])) #4
