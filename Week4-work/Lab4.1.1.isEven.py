@@ -16,3 +16,4 @@ while number != -1:
     else:
         print(f'{number} is an odd number')
         number = int(input('Please enter an integer: '))
+
