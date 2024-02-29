@@ -12,6 +12,24 @@ def display_menu():
 
     return choice
 
-# test the function
+def doadd():
+    #We'll fill this in later
+    print("in adding")
+
+def doview():
+    #We'll fill this in later
+    print("in viewing")
+
+#Main program
 choice = display_menu()
-print(f"You chose { choice }")
+while(choice != 'q'):
+    #We could do this with lambda functions??
+
+    if choice == 'a':
+        doadd()
+    elif choice == 'v':
+        doview()
+    elif choice != 'q':
+        print("\n\nPlease select either a, v or q")
+    choice = display_menu()
+
