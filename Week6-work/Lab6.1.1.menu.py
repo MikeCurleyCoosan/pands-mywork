@@ -51,9 +51,16 @@ do_add(students)
 print(students)
 '''
 
-def do_view():
-    #We'll fill this in later
-    print("in viewing")
+def display_modules(modules):
+    print("\tName \tGrade")
+    for module in modules:
+        print(f"\t {module['name']}\t{module['grade']}")
+
+def do_view(students):
+    for current_student in students:
+        print(current_student["name"])
+        display_modules(current_student["modules"])
+
 
 #Main program
 #Call the display_menu function to display the menu and get the users choice
