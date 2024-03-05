@@ -70,9 +70,9 @@ while(choice != 'q'):
     #We could do this with lambda functions?? (Possibly coming later in the course? Just noting for now. May be worth looking into)
 
     if choice == 'a':
-        do_add()    #Call the do_add function
+        do_add(students)    #Call the do_add function
     elif choice == 'v':
-        do_view()   #Call the do_view function
+        do_view(students)   #Call the do_view function
     elif choice != 'q':
         print("\n\nPlease select either a, v or q") #If the user's choice is not 'a', 'v' or 'q', we again ask them for their choice
     choice = display_menu()

@@ -2,6 +2,8 @@
 #Author: Michael Curley
 #Demonstrating modules with student_util.py and student_runner.py
 
+from github import Github
+
 
 #display_menu function, which displays a menu to the user
 def display_menu():
@@ -43,9 +45,9 @@ def do_view(students): #The function takes in the list of students as a paramete
 
 #display_modules function which takes in a list of modules and grades for a student and prints them out
 def display_modules(modules):   #The function takes in the list of modules as a parameter
-    print("\tName \tGrade")
+    print("\tName \t\tGrade")
     for module in modules:
-        print(f"\t {module['name']}\t{module['grade']}")
+        print(f"\t{module['name']}\t\t{module['grade']}")
 
 #do_nothing function which takes in a dummy parameter and does nothing
 def do_nothing(dummy):
