@@ -24,9 +24,6 @@ import os.path
 
 FILENAME = "count.txt" #The name of the file we will store the count in
 
-if not os.path.isfile(FILENAME): #Check if the file exists
-    write_number(0) #If it doesn't, create it and write a 0 to it
-
 #Write a funttion that reads in a number from a file that already exists (count.txt)
 def read_number():
     try:
@@ -40,4 +37,7 @@ def read_number():
 def write_number(number):
     with open(FILENAME, "wt") as f:
          #Write takes a string so we need to convert the number to a string
-         f.write(str(number)) #Write the number to the file
+         f.write(str(number)) #Write the number to the file#
+
+if not os.path.isfile(FILENAME): #Check if the file exists
+    write_number(0) #If it doesn't, create it and write a 0 to it
