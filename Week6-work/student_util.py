@@ -2,7 +2,6 @@
 #Author: Michael Curley
 #Demonstrating modules with student_util.py and student_runner.py
 
-from github import Github
 import json
 
 FILENAME = "studentsData.json" #The name of the file we will store the students in
@@ -15,7 +14,7 @@ def display_menu():
     print("\t(v) View students")    #View all students
     print("\t(s) Save students")    #Save students to file.....Modification from week 7 work
     print("\t(q) Quit")  #Quit
-    choice = input("Type one letter (a/v/q):").strip()
+    choice = input("Type one letter (a/v/s/q):").strip()
 
     return choice
 
@@ -54,7 +53,7 @@ def display_modules(modules):   #The function takes in the list of modules as a 
         print(f"\t{module['name']}\t\t{module['grade']}")
 
 #do_save function which takes in the list of students and saves them to a file
-def do_save(students)
+def do_save(students): #The function takes in the list of students as a parameter
     #We will put the call to save dictionary object here
     write_dict(students) #Modification from week 7 work
     print("students saved to file ")
