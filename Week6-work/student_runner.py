@@ -7,7 +7,7 @@ import student_util as su #Import the student_util module and give it the alias 
 students = [] #The array we store the students in
 
 #Main program
-students = [] #The array we store the students in
+students = su.do_load() #Modification from week 7 work
 choice = su.display_menu() #Call the display_menu function and store the result in the variable choice
 while choice != "q": #While the user's choice is not q
     if choice in su.choice_map: #If the user's choice is in the choice_map dictionary

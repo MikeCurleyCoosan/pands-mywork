@@ -58,9 +58,23 @@ def do_save(students): #The function takes in the list of students as a paramete
     write_dict(students) #Modification from week 7 work
     print("students saved to file ")
 
+#write_dict function which takes in a dictionary object and writes it to a file
 def write_dict(obj):
     with open(FILENAME, "wt") as f:
         json.dump(obj, f) #Write the Dict to the file
+
+#read_dict function which reads in a dictionary object from a file and stores it in a variable students
+def do_load():
+    #We will put the call to load dictionary object here
+    return read_dict() #Modification from week 7 work
+
+def read_dict():
+    try:
+        with open(FILENAME, "rt") as f:
+            return json.load(f)
+    except:
+        print("There is no file to load")
+        return []
 
 
 #do_nothing function which takes in a dummy parameter and does nothing
