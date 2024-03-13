@@ -22,6 +22,12 @@ print(salaries)
 salaries_plus = salaries + 5000 #Add 5000 to each salary
 print(salaries_plus)
 
+#you can also multiply, divide, subtract, and use the power of operator on numpy arrays
+salaries_mult = salaries * 1.05 #Add 5% to each salary
+print(salaries_mult)
 
+#This is a floating point array, as we are multiplying by a floating point number. Convert to an integer array
+new_salaries = salaries_mult.astype(int)
+print(new_salaries)
 
 
