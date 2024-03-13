@@ -28,7 +28,10 @@ plt.legend() #Show the legend
 x_points = np.array(range(1,101))
 y_points = x_points * x_points
 
-plt.plot(x_points, y_points, color='r', label = "x^2") #Create a scatter plot of the data. This will be random
-plt.legend() #Show the legend
+plt.plot(x_points, y_points, color='r', label = "x^2") #Create a scatter plot of the data. This will be random  
 
-plt.show() #Show the plot
+plt.title("Random Salaries and Ages") #Title the plot
+
+plt.savefig('prettier_plot.png') #Save the plot to a file
+
+#plt.show() #Show the plot
