@@ -2,7 +2,7 @@
 
 # Author: Michael Curley\
 import pandas as pd
-import menu as m
+import Python.menu as m
 
 df = pd.read_csv('iris.data', names = ["sepal_length", "sepal_width", "petal_length", "petal_width", "species"]) #Read in the iris dataset and store it in the variable df
 

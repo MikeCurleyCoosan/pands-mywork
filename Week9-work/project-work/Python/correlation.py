@@ -35,3 +35,5 @@ def create_correlation_matrix(df):
     #https://stackoverflow.com/questions/33660420/seaborn-ticklabels-are-being-truncated 
     plt.savefig('Correlation/correlation_heatmap.png') # Save the heatmap as a .png file
     plt.clf()
+
+    plt.close('all') # Close the current figure

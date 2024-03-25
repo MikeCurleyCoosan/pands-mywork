@@ -56,3 +56,5 @@ def create_boxplot(df, variable): #The function takes in two parameters, the dat
     #Save the plot as a .png file
     plt.savefig("Plots/" + variable + "_boxplot.png")
     plt.clf() #Clear the current figure
+
+    plt.close('all') #Close the current figure

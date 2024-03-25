@@ -1,12 +1,12 @@
 #Importing the necessary libraries
 import pandas as pd
-import summary as sm
-import correlation as corr
-import pairplot as pp
-import histogram as hist
-import boxplot as box
-import scatterplot as sp
-import get_variables as gv
+import Python.summary as sm
+import Python.correlation as corr
+import Python.pairplot as pp
+import Python.histogram as hist
+import Python.boxplot as box
+import Python.scatterplot as sp
+import Python.get_variables as gv
 
 #Read in the iris dataset and store it in the variable df
 df = pd.read_csv('iris.data', names = ["sepal_length", "sepal_width", "petal_length", "petal_width", "species"])

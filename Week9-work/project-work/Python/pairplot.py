@@ -104,3 +104,5 @@ def create_pairplot(df):
     #Save the plot as a .png file
     plt.savefig("Plots/pairplot.png")
     plt.clf() #Clear the current figure
+
+    plt.close('all') #Close the current figure

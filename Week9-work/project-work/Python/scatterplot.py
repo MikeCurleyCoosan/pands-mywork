@@ -39,3 +39,5 @@ def create_scatter_plot(df, x, y): #The function takes in three parameters, the 
     #Save the plot as a .png file
     plt.savefig("Plots/" + x + "_vs_" + y + "_scatter.png")
     plt.clf() #Clear the current figure
+
+    plt.close('all') #Close the current figure

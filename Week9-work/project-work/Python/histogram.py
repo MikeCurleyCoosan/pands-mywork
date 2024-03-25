@@ -40,3 +40,5 @@ def create_histogram(df, variable): #The function takes in two parameters, the d
     #Save the plot as a .png file
     plt.savefig("Plots/" + variable + "_histogram.png")
     plt.clf()
+
+    plt.close('all') #Close the current figure
