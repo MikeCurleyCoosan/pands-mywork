@@ -1,8 +1,8 @@
 # This is my analysis of the iris dataset for the programming and scripting module project in ATU 2024.
 
 # Author: Michael Curley\
-import pandas as pd
 import Python.menu as m
+import pandas as pd
 
 df = pd.read_csv('iris.data', names = ["sepal_length", "sepal_width", "petal_length", "petal_width", "species"]) #Read in the iris dataset and store it in the variable df
 

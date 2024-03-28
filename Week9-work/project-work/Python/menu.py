@@ -7,6 +7,7 @@ import Python.histogram as hist
 import Python.boxplot as box
 import Python.scatterplot as sp
 import Python.get_variables as gv
+import Python.best_fit as best_fit
 
 #Read in the iris dataset and store it in the variable df
 df = pd.read_csv('iris.data', names = ["sepal_length", "sepal_width", "petal_length", "petal_width", "species"])
@@ -25,8 +26,9 @@ def display_menu():
     print("\t(e) create a pairplot of the dataset")    #create a pairplot of the dataset
     print("\t(f) create a correlation matrix/heatmap for the dataset")    #create a correlation matrix for the dataset
     print("\t(g) Run all code and create summary.txt, correlation.txt, all .png files, and correlation heat map")  #Run all code and create summary.txt, correlation.txt, all .png files, and correlation heat map
+    print("\t(h) Create best fit line for scatter plots")  #Create best fit line for scatter plots
     print("\t(q) Quit")  #Quit
-    choice = input("Type one letter (a/v/s/q):").strip()
+    choice = input("Type one letter (a/b/c/d/e/f/g/h/q):").strip()
 
     return choice
 
@@ -70,6 +72,11 @@ def do_correlation_matrix(df):
     corr.create_correlation_matrix(df) #Create a correlation matrix for the dataset. This also creates a heatmap of the correlation matrix
     print("Correlation matrix/heatmap created")
 
+def do_best_fit(df):
+    print("Creating best fit line for scatter plots")
+    best_fit.best_fit(df)
+    print("Best fit line created")
+
 #do_all_code function which takes in a dataframe and runs all code and creates summary.txt, correlation.txt, all .png files, and correlation heat map
 def do_all_code(df):
     print("Running all code and creating summary.txt, correlation.txt, all .png files, and correlation heat map")
@@ -98,5 +105,6 @@ choice_map = {
     "e": do_pairplot,
     "f": do_correlation_matrix,
     "g": do_all_code,
+    "h": do_best_fit,
     "q": do_nothing
 }
