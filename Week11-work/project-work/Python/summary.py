@@ -1,4 +1,6 @@
 class Summary:
+#Author: Michael Curley
+#This class is used to create a summary of the dataset
 
     # Create a function to display a summary of the dataset into a file called summary.txt
     def create_summary(self, df, FILENAME): #The function takes in two parameters, the dataframe and the name of the file to write the summary to.

@@ -1,9 +1,14 @@
 class Scatterplot:
+#Author: Michael Curley
+#This class is used to create a scatter plot of the dataset
+#The scatter plot is used to compare two variables in the dataset
+
+    #Constructor. This is the code that is run when a new instance of the class is created. Here we pass in the dataframe
     def __init__(self, df):
         self.df = df
 
 
-    #Use same approach as above to create a scatter plot for each pair of variables. Therefore we create a function to create the scatter plots
+    #Create a function to create a scatter plot of the dataset
     def create_scatter_plot(self, x, y): #The function takes in three parameters, the dataframe and the two variables to create the scatter plot for
         # Import the required libraries
         import matplotlib.pyplot as plt
@@ -34,7 +39,8 @@ class Scatterplot:
         #Add a grid
         ax.grid(linestyle='--', linewidth=0.5, color='black', alpha=0.4)
 
-        #Add a title
+        #Add a title. We are using the capitalize() function to capitalise the first letter of each word in the title
+        #We are using the replace() function to replace the underscore with a space
         ax.set_title("Iris " + x.capitalize().replace('_', ' ') + " vs " + y.capitalize().replace('_', ' '), fontdict=font1)
 
         #Add a legend

@@ -1,5 +1,8 @@
 class Boxplot:
+#Author: Michael Curley
+#This class is used to create a boxplot for each variable in a dataset
 
+    #Constructor. This is the code that is run when a new instance of the class is created.
     def __init__(self):
         pass
 

@@ -1,9 +1,13 @@
 class Histogram:
+#Author: Michael Curley
+#This class is used to create a histogram for each variable in a dataset
 
+    #Constructor. This is the code that is run when a new instance of the class is created.
     def __init__(self):
         pass
 
-    def create_histogram(self, df, variable): #The function takes in two parameters, the dataframe and the variable to create the histogram for
+    #Create a function to create a histogram for each variable. This function can be called with every instance of the class.
+    def create_histogram(self, df, variable): #The function takes in three parameters, the instance of the class, the dataframe, and the variable to create a histogram for.
       
        
         #Import the required libraries

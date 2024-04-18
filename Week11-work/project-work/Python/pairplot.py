@@ -1,9 +1,12 @@
 class Pairplot:
+#Author: Michael Curley
+#This class is used to create a pairplot of the dataset
 
+    #Constructor. This is the code that is run when a new instance of the class is created. Here we pass in the dataframe
     def __init__(self, df):
         self.df = df
 
-    
+    #Create a function to create a pairplot of the dataset
     def create_pairplot(self):
 
         import matplotlib.pyplot as plt

@@ -1,4 +1,10 @@
 class Correlation:
+#Author: Michael Curley
+#This class is used to create a correlation matrix for a dataset
+
+    #Constructor. This is the code that is run when a new instance of the class is created.
+    def __init__(self):
+        pass
 
     #Create a function to create a correlation matrix for the dataset
     def create_correlation_matrix(self, df):
@@ -10,7 +16,12 @@ class Correlation:
         #Create a correlation matrix for the dataset
         df_corr = df.drop(columns='species') # Drop the species column as it is not needed for the correlation matrix
 
+        #Create a correlation matrix of the dataset
         CORRELATION = df_corr.corr()
+        #The corr() function is used to calculate the correlation between each variable in the dataset
+
+        
+        #We will save the correlation matrix to a file called correlations.txt
         with open("Correlation/correlations.txt", 'w') as f:
 
             #Write the correlation matrix to the file
