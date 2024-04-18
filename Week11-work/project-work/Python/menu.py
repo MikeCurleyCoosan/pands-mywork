@@ -1,18 +1,11 @@
 class Menu:
+    #Import the pandas library
+    import pandas as pd
+    #Import the GetVariables class from the get_variables.py file
+    from Python.get_variables import GetVariables as gv
     #Constructor
     def __init__(self):
         pass
-
-    #Importing the necessary libraries
-    import pandas as pd
-    
-    from Python.correlation import Correlation as corr
-    from Python.pairplot import Pairplot as pp
-    from Python.histogram import Histogram as hist
-    from Python.boxplot import Boxplot as box
-    from Python.scatterplot import Scatterplot as sp
-    from Python.get_variables import GetVariables as gv
-    from Python.best_fit import BestFit as bf
 
     #Read in the iris dataset and store it in the variable df
     df = pd.read_csv('iris.data', names = ["sepal_length", "sepal_width", "petal_length", "petal_width", "species"])
@@ -39,7 +32,7 @@ class Menu:
         return choice
 
     #do_summary function which takes in a dataframe and creates a summary.txt file
-    def do_summary(df):
+    def do_summary(df, FILENAME="summary.txt"):
         print("Creating summary.txt file")
         from Python.summary import Summary as sm
         summary = sm()
@@ -76,6 +69,8 @@ class Menu:
         print("Creating a boxplot of variables")
         from Python.boxplot import Boxplot as box
         from Python.get_variables import GetVariables as gv
+        get_variables = gv(df)
+        my_var = get_variables.get_variables()
         boxplot = box()
         for variable in my_var: #For each variable in the dataset
             boxplot.create_boxplot(df, variable) #Create a boxplot of the variable and save it as a .png file
@@ -84,7 +79,7 @@ class Menu:
     #do_pairplot function which takes in a dataframe and creates a pairplot of the dataset
     def do_pairplot(df):
         print("Creating a pairplot of the dataset")
-        import Python.pairplot as pp
+        from Python.pairplot import Pairplot as pp
         pairplot = pp(df)
         pairplot.create_pairplot() #Create a pairplot of the dataset and save it as a .png file
         print("Pairplot created")
@@ -92,27 +87,31 @@ class Menu:
     #do_correlation_matrix function which takes in a dataframe and creates a correlation matrix for the dataset
     def do_correlation_matrix(df):
         print("Creating a correlation matrix/heatmap for the dataset")
-        import Python.correlation as corr
+        from Python.correlation import Correlation as corr
         correlation = corr()
         correlation.create_correlation_matrix(df) #Create a correlation matrix for the dataset. This also creates a heatmap of the correlation matrix
         print("Correlation matrix/heatmap created")
 
     def do_best_fit(df):
         print("Creating best fit line for scatter plots")
-        import Python.best_fit as bf
+        from Python.best_fit import BestFit as bf
         best_fit = bf(df)
         best_fit.best_fit()
         print("Best fit line created")
 
     #do_all_code function which takes in a dataframe and runs all code and creates summary.txt, correlation.txt, all .png files, and correlation heat map
-    def do_all_code(df):
+    def do_all_code(df, FILENAME="summary.txt"):
         print("Running all code and creating summary.txt, correlation.txt, all .png files, and correlation heat map")
-        import Python.summary as sm
-        import Python.histogram as hist
-        import Python.boxplot as box
-        import Python.scatterplot as sp
-        import Python.pairplot as pp
-        import Python.correlation as corr
+        from Python.correlation import Correlation as corr
+        from Python.pairplot import Pairplot as pp
+        from Python.histogram import Histogram as hist
+        from Python.boxplot import Boxplot as box
+        from Python.scatterplot import Scatterplot as sp
+        from Python.best_fit import BestFit as bf
+        from Python.summary import Summary as sm
+        from Python.get_variables import GetVariables as gv
+        get_variables = gv(df)
+        my_var = get_variables.get_variables()
 
         summary = sm()
         histogram = hist()
@@ -127,7 +126,7 @@ class Menu:
         for i in range(len(my_var)):
             for j in range(i+1, len(my_var)):
                 scatterplot.create_scatter_plot(my_var[j], my_var[i])
-        pairplot.create_pairplot(df)
+        pairplot.create_pairplot()
         correlation.create_correlation_matrix(df)
         print("All code run and files created")
 

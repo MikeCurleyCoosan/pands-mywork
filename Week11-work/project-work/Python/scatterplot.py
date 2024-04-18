@@ -2,6 +2,7 @@ class Scatterplot:
     def __init__(self, df):
         self.df = df
 
+
     #Use same approach as above to create a scatter plot for each pair of variables. Therefore we create a function to create the scatter plots
     def create_scatter_plot(self, x, y): #The function takes in three parameters, the dataframe and the two variables to create the scatter plot for
         # Import the required libraries
